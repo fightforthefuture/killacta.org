@@ -35,9 +35,148 @@
 		var smtProt = (("https:" == document.location.protocol) ? "https://" : "http://");
 		document.write(unescape("%3Cscript src='" + smtProt + "cdn01.smartling.com/ls/"+ smtId +".js' type='text/javascript'%3E%3C/script%3E"));
 		</script>
+		
+		<style>
+		/* top level  */
+		ul.smt-menu {
+			position:relative;
+			width:200px; /* MUST BE SET TO FIXED WITH */
+			margin:0 0 0 0 !important;
+			padding:0 0 0 0 !important;
+			list-style:none !important;
+			z-index:99999;
+			visibility:visible; 
+		}
 
-		<!--Place this div where you want the menu to appear -->
-		<div id="smt-lang-selector"></div>
+		/* no focus dotted line  */
+		ul.smt-menu :focus {
+			outline: 0 !important;
+		}
+
+
+		/* container of menu items */
+		ul.smt-menu ul {
+			position:absolute !important;
+			display:none;
+			list-style:none !important;
+			text-indent:none !important;
+			width:100%;
+			padding:0 0 0 0 !important;
+			margin:0 0 0 0 !important;	
+			border:1px solid #999;
+		}
+
+		/* list items (includes trigger) */
+		ul.smt-menu li {
+			margin:0;
+			padding:0 !important;	
+			display:block !important;
+			float:left !important;
+			width:100% !important;
+		}
+
+		/* item wrapper */
+		ul.smt-menu li.smt-item { 
+			float:none !important;
+			display:block !important;
+		}
+
+		/* down arrow at end of trigger link */
+		ul.smt-menu li .smt-trigger-link .smt-downArrow
+		{
+			display:inline-block;
+			height:13px;
+			width:13px;
+			background:url(bullet_arrow_down.png) no-repeat;
+		}
+
+		/* hover state for button which opens menu */
+		ul.smt-menu li:hover .smt-trigger-link,
+		ul.smt-menu li.sfhover .smt-trigger-link 
+		{
+
+		}
+
+		/* triggers has-layout for ie6 */
+		* html .smt-trigger-link, .smt-link 
+		{
+			display:inline-block;
+		}
+
+
+		/* styles trigger link */
+		ul.smt-menu a.smt-trigger-link
+		{
+			display:block !important;
+			padding:0px !important;
+			text-decoration:none !important;
+			font-family:arial !important;
+			font-size:12px !important;
+			color:#000 !important;
+			background-color:#fff;
+			cursor:pointer;		
+			border:0px solid black;
+		}
+
+		/* styles item link tags */
+		a.smt-link 
+		{
+			display:block !important;
+			padding:3px 7px !important;
+			text-decoration:none !important;
+			font-family:arial !important;
+			font-size:12px !important;
+			line-height:12px !important;
+			color:#000 !important;
+			background-color:#fff;
+			cursor:pointer;		
+			border:0px solid black;
+		}
+
+		/* menu items */
+		ul.smt-menu li li a 
+		{
+			background-color:#fff;
+		}
+
+		/* hover state for menu items */
+		ul.smt-menu li li a:hover 
+		{
+			background-color:#999 !important;
+			color:#fff !important;
+		}
+
+		/* the world "language" in trigger  */
+		ul.smt-menu span.smt-word 
+		{
+			font-weight:normal !important;
+			padding-right:5px !important;
+		}
+
+		/* the name of language in trigger  */
+		ul.smt-menu span.smt-lang 
+		{
+			font-weight:bold !important;
+			color:#000 !important;
+		}
+
+		/* hover state for name of language in trigger */
+		ul.smt-menu li:hover span.smt-word,
+		ul.smt-menu li.sfhover span.smt-word
+		{
+		}
+
+		/* hover state for the world "language" in trigger */
+		ul.smt-menu li:hover span.smt-lang,
+		ul.smt-menu li.sfhover span.smt-lang 
+		{
+			color:#000 !important;
+		}
+
+		
+		
+		</style>
+
 		
 	</head>
 	<body>
@@ -56,6 +195,9 @@
 		<script type="text/javascript">var _sf_startpt=(new Date()).getTime()</script>
 
 		<div id="shareitup" style="overflow: visible">
+			<!--Place this div where you want the menu to appear -->
+			<div id="smt-lang-selector"></div>
+			
 			<div class="fb-like" data-href="http://killacta.org" data-send="true" data-layout="box_count" data-width="150" data-show-faces="true"></div>
 			<div><a href="https://twitter.com/share" class="twitter-share-button" data-count="vertical" data-text="If #MPAA can shortcircuit #Congress & pass #SOPA -style laws in trade agreements like #ACTA, we're screwed. Fight back!">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
@@ -64,7 +206,7 @@
 		<div id="strike-topper"></div>
 		<div id="strike-wrapper">
 
-			<h1>Protests Break Out Across Europe Saturday! Join Us to Stop <a href="#acta">ACTA</a> & TPP!</h1>
+			<h1>Europe votes on ACTA in June!</h1>
 			<h2>They tried to push <a href="http://americancensorship.org/">internet censorship</a> through Congress and we <a href="http://sopastrike.com/">stopped them</a>. But the companies behind <a href="http://fightforthefuture.org/pipa">SOPA & PIPA</a> have a backup plan: secretive trade agreements like <a href="http://www.stopacta.info/">ACTA</a> & <a href="https://www.eff.org/issues/tpp">TPP</a>.<br /> If we can't stop these backroom deals, the internet's future belongs to SOPA's backers.</h2>
 
 			
