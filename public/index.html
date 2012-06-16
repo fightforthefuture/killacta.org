@@ -451,6 +451,15 @@ Thank you. Please reply if you have any questions.
 
 			</script>
 			<script src="/scripts.js"></script>
+			
+				<script type="application/javascript">
+				    function getip(json){
+			//	      alert(json.ip); // alerts the ip address
+							$('#signup_ip').val(json.ip);
+				    }
+
+				$("#user_agent").val(navigator.userAgent);
+				</script>
 		</div>
 	</body>
 </html>
